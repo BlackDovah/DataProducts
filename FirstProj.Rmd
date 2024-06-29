@@ -1,0 +1,35 @@
+---
+title: "2024-06-29"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = F}
+library(leaflet)
+
+location = c("Library of Alexandria", 
+             "Qaitbay Citadel",
+             "Kom El Deka",
+             "Roman Amphitheater",
+             "Alexandria National Museum")
+
+wikipages = c("<a href=https://en.wikipedia.org/wiki/Library_of_Alexandria>Library of Alexandria</a>",
+              "<a href=https://en.wikipedia.org/wiki/Citadel_of_Qaitbay>Qaitbay Citadel</a>",
+              "<a href=https://en.wikipedia.org/wiki/Kom_El_Deka>Kom_El_Deka</a>",
+              "<a href=http://www.alexandria.gov.eg/Alex/english/Roman%20Amphitheater.html>Roman_Amphitheater</a>",
+              "<a href=http://www.alexandria.gov.eg/Alex/english/National%20Museum%20of%20Alexandria.html>Alexandria_National_Museum</a>")
+
+alexMap = data.frame(
+        lat = c(31.208870, 31.2130, 31.196687, 31.194518, 31.200705), 
+        lng = c(29.909201, 29.8852, 29.90564, 29.904515, 29.913240))
+
+alexMap %>% 
+        leaflet() %>% 
+        addTiles() %>% 
+        addMarkers(label = location, popup = wikipages)
+```
