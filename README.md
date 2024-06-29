@@ -1,3 +1,4 @@
 Please find the URLs to the different projects in this repository here :
 
-Interactive map for SomeAlexandriaMonuments : https://BlackDovah.github.io/DataProducts/FirstProj.html
+Project_1: Interactive map for SomeAlexandriaMonuments : https://BlackDovah.github.io/DataProducts/FirstProj.html
+Project_2: Interactive plotely plot on data from my graduation project : https://blackdovah.github.io/DataProducts/2ndProj/2ndProj.html#1
