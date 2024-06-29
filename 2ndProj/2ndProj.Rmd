@@ -1,0 +1,21 @@
+---
+title: "Interactive plot on graduation project data"
+author: "Samuel Aboelkhir"
+date: "2024-06-29"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r,echo=F}
+suppressPackageStartupMessages(library(plotly))
+suppressPackageStartupMessages(library(readxl))
+tidy = read_excel("tidyCollegeData.xlsx")
+```
+
+***
+```{r, echo = F, warning=FALSE}
+plot_ly(subset(tidy, select = -c(...1)), x = ~species ,y = ~extractionmethod, type = "scatter", size = ~inhibitionzones, frame = ~pathogen, color = ~inhibitionzones, mode = "markers")
+```
