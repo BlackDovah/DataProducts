@@ -1,0 +1,40 @@
+---
+title: "HorsePower Predictor App."
+author: "Samuel Aboelkhir"
+date: "2024-06-30"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## How does the app work?
+
+This app was built using R to determine the most significant predictors from the mtcars data set, and use them to create a linear regression prediction model that can predict the horsepower of a vehicle, based on it's displacement, weight, and number of cylinders. 
+
+## How to use the app?
+
+To use this app, you need to to input three values :
+
+- The displacement, using a slider.
+- The weight, also using a slider.
+- The number of cylinders, from a dropdown menu.
+
+## Output and layout explanation :
+
+This app's front page will have the input section on the sidebar, and two tabs showing the output, and the details of the model itself.
+
+The output you get is the predicted horsepower of the vehicule, and three plots showing the scatter plot of horsepower with each predictor, and on each plot, you will see a red dot representing where the predicted value would fit.
+
+
+## Final words.
+
+Here is an example of what one of the plots would look like.
+```{r}
+plot(mtcars$wt, mtcars$hp, xlab = "weight", ylab = "horsepower", pch = 16)
+points(5, 187.5901, col = "red", pch = 16, cex = 2)
+```
+
+Thank you. Feedback would be appreciated.
+
