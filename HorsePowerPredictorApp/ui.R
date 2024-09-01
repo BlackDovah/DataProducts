@@ -12,7 +12,8 @@ fluidPage(
                 mainPanel(
                         tabsetPanel(type = "tabs",
                                     tabPanel("Prediction value",
-                                             br(), h4("The predicted Horsepower value."),
+                                             br(), 
+                                             h4("The predicted Horsepower value."),
                                              textOutput("tab1"),
                                              h4("The following plots show the where the predicted value would be on the scatter plot between 'HorsePower', and each of the three predictor variables."),
                                              plotOutput("plot1"),
